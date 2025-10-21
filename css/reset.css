@@ -1,0 +1,105 @@
+/* reset.css
+   Reset moderno inspirado nas práticas de Andy Bell (não é uma cópia literal).
+   Objetivo: fornecer uma base consistente, acessível e previsível entre navegadores.
+*/
+
+/* Box sizing global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remover margens padrão em elementos de bloco comuns */
+html, body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base tipográfica e 100% altura para o documento */
+html, body {
+  height: 100%;
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%; /* prevenir zoom indesejado em iOS */
+}
+
+/* Tornar imagens e mídias responsivas */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remover estilo padrão de listas onde for apropriado */
+ul[role='list'], ol[role='list'], ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Text-level resets */
+button, input, optgroup, select, textarea {
+  font-family: inherit; /* herdar fonte do documento */
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Tornar botões e links mais previsíveis */
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Forçar que elementos form não exibam outline apagado em todos navegadores
+   (manter acessibilidade: não remover outlines sem fornecer foco alternativo)
+*/
+:focus {
+  outline: 2px solid Highlight; /* fallback visível */
+  outline-offset: 2px;
+}
+
+/* Normalizar tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reduzir animações para usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Remover placeholders e textos de formulários indesejados */
+::placeholder {
+  color: #9ca3af; /* cor neutra para placeholders */
+  opacity: 1;
+}
+
+/* Melhor localização visual para elementos acessíveis */
+[hidden] {
+  display: none !important;
+}
+
+/* Pequenas helpers que aparecem com frequência */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Força o comportamento padrão de scroll em ancoras (opcional) */
+html:focus-within {
+  scroll-behavior: smooth;
+}
