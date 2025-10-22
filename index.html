@@ -3,24 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SyntaxWear - Ecommerce</title>
+  <title>SyntaxWear - Tênis e Sneakers Online</title>
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components/header.css">
 </head>
 <body>
-  <header class="site-header main-header" role="banner">
-    <div class="container header-inner">
+  <header class="site-header" role="banner">
       <h1 class="logo">
         <a href="/" title="SyntaxWear - Tênis e Sneakers Online">
-          <img src="/images/logo.png" alt="SyntaxWear - Logo">
+          <img src="./images/logo/Logo.svg" alt="SyntaxWear - Tênis e Sneakers Online">
         </a>
-      </h1>
+        </h1>
 
-      <nav class="main-nav" aria-label="Navegação principal">
-        <ul class="nav-list">
-          <!-- Itens de navegação (ex: Masculino, Feminino, Outlet) serão adicionados aqui -->
+        <nav class="nav-center" aria-label="Navegação principal">
+          <ul>
+           
+            <li><a href="#">Masculino</a></li>
+            <li><a href="#">Feminino</a></li>
+            <li><a href="#">Outlet</a></li>
+          </ul>
+        </nav>
+
+      
+
+      <!-- Secondary actions navigation (text links + icons) -->
+      <nav class="nav-right" aria-label="Acesso rápido">
+        <ul>
+          <li><a href="#">Nossas lojas</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li>
+            <a href="#" aria-label="Minha conta">
+              <img src="/images/icons/user.svg" alt="Minha conta">
+              
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Ajuda">
+              <img src="/images/icons/help.svg" alt="Ajuda" />
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Carrinho">
+              <img src="/images/icons/bag.svg" alt="Carrinho" />
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
